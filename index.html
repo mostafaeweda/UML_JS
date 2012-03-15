@@ -1,0 +1,17 @@
+<html>
+  <head>
+  </head>
+  <body>
+        <!-- <script src='/socket.io/socket.io.js'></script> -->
+        <script src='require.js'></script>
+        <script>
+          window.onerror = function(msg, file, line) {
+            alert(msg + " @ " + file + " : " + line);
+          };
+          require({ paths: {
+            diagram: 'lib'
+          }});
+        </script>
+        <script src='uml_demo.js'></script>
+    </body>
+</html>

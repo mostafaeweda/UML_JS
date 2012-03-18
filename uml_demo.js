@@ -8,8 +8,8 @@ createDiagram();
 
 function createDiagram() {
     var canvas = document.createElement('canvas');
-    canvas.width = 400;
-    canvas.height = 300;
+    canvas.width = window.innerWidth - 20;
+    canvas.height = window.innerHeight - 20;
     var ctx = canvas.getContext('2d');
     var body = document.getElementsByTagName('body')[0];
     body.appendChild(canvas);

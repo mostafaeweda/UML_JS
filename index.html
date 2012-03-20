@@ -1,17 +1,22 @@
 <html>
   <head>
+		<!-- <script src='/socket.io/socket.io.js'></script> -->
+		<script src='require.js'></script>
+		<script>
+			window.onerror = function(msg, file, line) {
+				alert(msg + " @ " + file + " : " + line);
+			};
+			require({ paths: {
+				diagram: 'lib'
+			}});
+		</script>
+		<script src='uml_demo.js'></script>
   </head>
   <body>
-        <!-- <script src='/socket.io/socket.io.js'></script> -->
-        <script src='require.js'></script>
-        <script>
-          window.onerror = function(msg, file, line) {
-            alert(msg + " @ " + file + " : " + line);
-          };
-          require({ paths: {
-            diagram: 'lib'
-          }});
-        </script>
-        <script src='uml_demo.js'></script>
-    </body>
+  		<div id="toobox">
+			<input id="toolbox_clazz" type="button" />
+		</div>
+		<div id="diagram">
+		</div>
+  </body>
 </html>
